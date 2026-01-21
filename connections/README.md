@@ -3,7 +3,7 @@
 # Connections Puzzle Solver
 
 **Automatsko rješavanje Connections zagonetki**  
-*16 riječi → 4 tematske grupe po 4 riječi | 45% accuracy | 2s po zagonetci*
+*16 riječi → 4 tematske grupe po 4 riječi *
 
 </div>
 
@@ -16,9 +16,9 @@ Projekt rješava Connections igru: uzima 16 riječi i automatski ih grupira u 4 
 
 | Komponenta | Tehnologija |  Uloga |
 |------------|-------------|----------|
-| **Dataset** |  Asap7772/NYT-Connections-Processed<br/>*650+ zagonetki* |
-| **Embeddingi** | `sentence-transformers` | **all-mpnet-base-v2**<br/>*768D semantički vektori* |
-| **Klastering** | `k-means-constrained` | **4×4 grupiranje**<br/>*Garantovana veličina* |
+| **Dataset** |  Asap7772/NYT-Connections-Processed<br/> |
+| **Embedding** | `sentence-transformers` | **all-mpnet-base-v2**<br/>*768D semantički vektori* |
+| **Klastering** | `k-means-constrained` | **4×4 grupiranje**<br/> |
 | **Evaluacija** | `scikit-learn` | `accuracy_score()`<br/>*Custom grupna metrika* |
 | **Vizualizacija** | `umap-learn` + `matplotlib` | **UMAP 2D projekcija**<br/>*Embedding prostor* |
 
@@ -32,7 +32,7 @@ pip install datasets sentence-transformers k-means-constrained umap-learn scikit
 
 ### **Performanse modela**
 
-| Model | 📝 **Accuracy** |
+| Model | **Accuracy** |
 |-------|---------------------|
 | **KMeansConstrained** | **45%** |
 | RandomForest | **28%** |
